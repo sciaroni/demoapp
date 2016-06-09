@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: demoapp
+  labels:
+    app: demoapp
+    version: 1.0
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demoapp
+    spec:
+      containers:
+        - name: demoapp-container
+          image: registry.default.svc.appfactory.local/demoapp 
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: "http-server"
