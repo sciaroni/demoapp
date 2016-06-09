@@ -5,7 +5,7 @@ metadata:
   name: demoapp
   labels:
     app: demoapp
-    version: 1.0
+    version: "1.0"
 spec:
   replicas: 1
   template:
