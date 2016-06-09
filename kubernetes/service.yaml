@@ -2,13 +2,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: jenkins-pub
+  name: demoapp-prod
 spec:
   type: NodePort
   ports:
     - port: 80
       protocol: TCP
-      targetPort: 8080
-      nodePort: 8081
+      targetPort: 80
   selector:
-    app: jenkins
+    app: demoapp
